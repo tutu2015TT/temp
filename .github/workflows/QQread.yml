@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/banditlives/zzymg.git ~/zzymg
+          git clone https://github.com/tutu2015TT/temp.git ~/temp
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -27,13 +27,13 @@ jobs:
       - name: npm install
         if: env.QQ_QQreadURL
         run: |
-          cd ~/zzymg
+          cd ~/temp
           git checkout master
           npm install
       - name: '运行 【QQ阅读】'
         if: env.QQ_QQreadURL
         run: |
-          cd ~/zzymg
+          cd ~/temp
           node Task/QQread.js
         env:
           
